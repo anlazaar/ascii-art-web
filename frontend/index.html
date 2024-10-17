@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title" class="typing">ASCII Art Generator</h1>
+        
+        <div class="generator-box">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="textInput" 
+                    placeholder="Enter your text here"
+                >
+                <select id="styleSelect">
+                    <option value="standard">Standard</option>
+                    <option value="thinkertoy">Thinkertoy</option>
+                    <option value="shadow">Shadow</option>
+                </select>
+                <button onclick="generateAscii()">Generate</button>
+            </div>
+            
+            <div class="result-section">
+                <h2 id="resultTitle" class="typing">Your ASCII Art:</h2>
+                <pre id="asciiResult">ASCII art will be generated here...</pre>
+                <div class="button-group">
+                    <button id="downloadBtn" onclick="downloadAsciiArt()" disabled>Download ASCII Art</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        &copy; All Rights Reserved to Anass Lazaar
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #3D3B40;
+    color: #F8EDFF;
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.generator-box {
+    background-color: #515053;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+input, select {
+    padding: 0.5rem;
+    border: 2px solid #525CEB;
+    border-radius: 0.25rem;
+    background-color: #3D3B40;
+    color: #F8EDFF;
+}
+
+input {
+    flex-grow: 1;
+}
+
+select {
+    width: 180px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #525CEB;
+    color: #F8EDFF;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #4450f8;
+}
+
+.result-section {
+    margin-top: 2rem;
+    overflow-x: auto;
+}
+
+.result-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#asciiResult {
+    background-color: #3D3B40;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    white-space: pre;
+    font-family: monospace;
+    overflow-x: auto;
+    min-height: 100px;
+    max-height: 400px;
+    width: 100%;
+}
+
+.typing::after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #F8EDFF;
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+#downloadBtn {
+    padding: 0.5rem 1rem;
+    background-color: #525CEB;
+    color: #F8EDFF;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#downloadBtn:hover {
+    background-color: #525CEB;
+}
+
+#downloadBtn:disabled {
+    background-color: #9298e8;
+    cursor: not-allowed;
+}
